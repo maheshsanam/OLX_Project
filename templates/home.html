@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CARSO - Second Hand Car Price</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: white;
+            color: #333;
+        }
+
+        /* Header styling */
+        header {
+            background-color: #FF4136; /* Red color */
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin-top: 0;
+        }
+
+        /* Navigation styling */
+        nav {
+            margin-top: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #FF4136;
+            font-size: 1.2em;
+            margin: 0 15px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #111;
+        }
+
+        /* Main content styling */
+        .main-content {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .main-content h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .main-content p {
+            font-size: 1.1em;
+            margin-bottom: 30px;
+        }
+
+        .main-content .btn {
+            background-color: #FF4136;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .main-content .btn:hover {
+            background-color: #E22B1D;
+            transform: scale(1.05);
+        }
+
+        /* Footer styling */
+        footer {
+            background-color: #F7F7F7;
+            color: #777;
+            text-align: center;
+            padding: 20px 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .main-content .btn {
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Welcome to CARSO</h1>
+        <p>Your Trusted Platform for Second Hand Car Pricing</p>
+    </header>
+
+    <!-- Navigation Section -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#pricing">Know Your Car Price</a>
+        <a href="#contact">Contact Us</a>
+    </nav>
+
+    <!-- Main Content Section -->
+    <section class="main-content">
+        <h2>Discover the Real Value of Your Car</h2>
+        <p>With CARSO, get the most accurate and up-to-date prices for your second-hand car. Our advanced algorithms ensure you receive a fair and transparent valuation.</p>
+        <a href="#pricing" class="btn">Know Your Car Price</a>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 CARSO. All rights reserved.</p>
+    </footer>
+</body>
+</html>
