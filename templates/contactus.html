@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - CARSO</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            color: #333;
+        }
+
+        header {
+            background-color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        header h1 {
+            color: #d32f2f;
+            font-size: 2.5em;
+            margin: 0;
+            font-weight: bold;
+        }
+
+        .content {
+            padding: 40px;
+            text-align: center;
+        }
+
+        .content h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #d32f2f;
+        }
+
+        .content p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #f9f9f9;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .contact-form input,
+        .contact-form textarea,
+        .contact-form select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            transition: border-color 0.3s;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus,
+        .contact-form select:focus {
+            border-color: #d32f2f;
+            outline: none;
+        }
+
+        .contact-form button {
+            background-color: #d32f2f;
+            color: #fff;
+            padding: 15px 25px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #b71c1c;
+        }
+
+        footer {
+            background-color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-top: 2px solid #e0e0e0;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1em;
+            color: #777;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes inputGlow {
+            from {
+                box-shadow: 0 0 5px 0 rgba(211, 47, 47, 0);
+            }
+            to {
+                box-shadow: 0 0 10px 2px rgba(211, 47, 47, 0.5);
+            }
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus,
+        .contact-form select:focus {
+            animation: inputGlow 0.5s forwards;
+        }
+    </style>
+</head>
+<body>
+    <header class="header-animation">
+        <h1>Contact Us</h1>
+    </header>
+
+    <div class="content">
+        <h2>We'd Love to Hear From You!</h2>
+        <p>Whether you have a question about our service or need assistance, you can reach us through this form. Our team is ready to help you with anything you need.</p>
+        <div class="contact-form">
+            <form action="/contact" method="POST">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="country">Country</label>
+                <select id="country" name="country" required>
+                    <option value="">Select Country</option>
+                    <option value="USA">USA</option>
+                    <option value="Canada">Canada</option>
+                    <option value="UK">UK</option>
+                    <option value="Australia">Australia</option>
+                    <option value="India">India</option>
+                    <!-- Add more options as needed -->
+                </select>
+
+                <label for="state">State</label>
+                <input type="text" id="state" name="state" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 CARSO. All rights reserved.</p>
+    </footer>
+</body>
+</html>

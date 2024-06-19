@@ -3,104 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CARSO - Second Hand Car Price</title>
+    <title>CARSO - Know Your Car Price</title>
     <style>
-        /* Basic Reset */
-        * {
+        body {
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-        }
-
-        /* Body styling */
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: white;
+            background-color: #fff;
             color: #333;
         }
 
-        /* Header styling */
         header {
-            background-color: #FF4136; /* Red color */
-            color: white;
-            padding: 20px 0;
+            background-color: #fff;
+            padding: 20px;
             text-align: center;
+            border-bottom: 2px solid #e0e0e0;
         }
 
         header h1 {
+            color: #d32f2f;
             font-size: 2.5em;
-            margin-bottom: 10px;
-            animation: fadeIn 2s ease-in-out;
+            margin: 0;
+            font-weight: bold;
         }
 
-        header p {
-            font-size: 1.2em;
-            margin-top: 0;
-        }
-
-        /* Navigation styling */
-        nav {
-            margin-top: 20px;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #FF4136;
-            font-size: 1.2em;
-            margin: 0 15px;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: #111;
-        }
-
-        /* Main content styling */
-        .main-content {
+        .content {
+            padding: 40px;
             text-align: center;
-            padding: 50px 20px;
         }
 
-        .main-content h2 {
+        .content h2 {
             font-size: 2em;
             margin-bottom: 20px;
         }
 
-        .main-content p {
-            font-size: 1.1em;
+        .content p {
+            font-size: 1.2em;
             margin-bottom: 30px;
         }
 
-        .main-content .btn {
-            background-color: #FF4136;
-            color: white;
-            padding: 15px 30px;
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .cta-buttons a {
+            background-color: #d32f2f;
+            color: #fff;
+            padding: 15px 25px;
             text-decoration: none;
+            font-size: 1.2em;
             border-radius: 5px;
-            transition: background-color 0.3s, transform 0.3s;
+            transition: background-color 0.3s ease;
         }
 
-        .main-content .btn:hover {
-            background-color: #E22B1D;
-            transform: scale(1.05);
+        .cta-buttons a:hover {
+            background-color: #b71c1c;
         }
 
-        /* Footer styling */
+        .info-section {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 40px;
+            background-color: #f9f9f9;
+        }
+
+        .info-section div {
+            flex: 1;
+            margin: 20px;
+            text-align: left;
+        }
+
+        .info-section div h3 {
+            font-size: 1.8em;
+            color: #d32f2f;
+            margin-bottom: 15px;
+        }
+
+        .info-section div p {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
         footer {
-            background-color: #F7F7F7;
-            color: #777;
+            background-color: #fff;
+            padding: 20px;
             text-align: center;
-            padding: 20px 0;
-            position: absolute;
-            bottom: 0;
-            width: 100%;
+            border-top: 2px solid #e0e0e0;
         }
 
-        /* Animation */
-        @keyframes fadeIn {
+        footer p {
+            margin: 0;
+            font-size: 1em;
+            color: #777;
+        }
+
+        /* Animations */
+        .header-animation {
+            animation: slideIn 1s ease-in-out;
+        }
+
+        .cta-buttons a {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes slideIn {
             from {
                 opacity: 0;
-                transform: translateY(-20px);
+                transform: translateY(-50px);
             }
             to {
                 opacity: 1;
@@ -108,48 +120,46 @@
             }
         }
 
-        .main-content .btn {
-            animation: pulse 1.5s infinite;
-        }
-
         @keyframes pulse {
             0% {
-                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(211, 47, 47, 0.7);
             }
-            50% {
-                transform: scale(1.1);
+            70% {
+                box-shadow: 0 0 0 10px rgba(211, 47, 47, 0);
             }
             100% {
-                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(211, 47, 47, 0);
             }
         }
-
     </style>
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
+    <header class="header-animation">
         <h1>Welcome to CARSO</h1>
-        <p>Your Trusted Platform for Second Hand Car Pricing</p>
     </header>
 
-    <!-- Navigation Section -->
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#pricing">Know Your Car Price</a>
-        <a href="#contact">Contact Us</a>
-    </nav>
+    <div class="content">
+        <h2>Get the Best Price for Your Second Hand Car</h2>
+        <p>CARSO provides accurate and reliable price estimates for your second hand car. Enter your car details and get an instant valuation.</p>
+        <div class="cta-buttons">
+            <a href="/check">Know Your Car Price</a>
+            <a href="/contact">Contact Us</a>
+        </div>
+    </div>
 
-    <!-- Main Content Section -->
-    <section class="main-content">
-        <h2>Discover the Real Value of Your Car</h2>
-        <p>With CARSO, get the most accurate and up-to-date prices for your second-hand car. Our advanced algorithms ensure you receive a fair and transparent valuation.</p>
-        <a href="#pricing" class="btn">Know Your Car Price</a>
-    </section>
+    <div class="info-section">
+        <div>
+            <h3>Why Choose CARSO?</h3>
+            <p>At CARSO, we use advanced algorithms and market data to ensure you get the most accurate price for your car. Our service is fast, easy to use, and trusted by thousands of customers.</p>
+        </div>
+        <div>
+            <h3>How It Works</h3>
+            <p>Simply provide us with some basic information about your car, and our system will analyze current market trends and similar sales to give you a competitive price estimate.</p>
+        </div>
+    </div>
 
-    <!-- Footer Section -->
     <footer>
-        <p>&copy; 2024 CARSO. All rights reserved.</p>
+        <p>© 2024 CARSO. All rights reserved.</p>
     </footer>
 </body>
 </html>

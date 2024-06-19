@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - CARSO</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            color: #333;
+            text-align: center;
+        }
+
+        header {
+            background-color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        header h1 {
+            color: #d32f2f;
+            font-size: 2.5em;
+            margin: 0;
+            font-weight: bold;
+        }
+
+        .content {
+            padding: 40px;
+            text-align: center;
+        }
+
+        .content h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #d32f2f;
+        }
+
+        .content p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        .smiley {
+            font-size: 5em;
+            color: #d32f2f;
+            margin: 20px 0;
+            animation: bounce 2s infinite;
+        }
+
+        .back-button {
+            display: inline-block;
+            background-color: #d32f2f;
+            color: #fff;
+            padding: 15px 25px;
+            text-decoration: none;
+            font-size: 1.2em;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+
+        .back-button:hover {
+            background-color: #b71c1c;
+        }
+
+        footer {
+            background-color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-top: 2px solid #e0e0e0;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1em;
+            color: #777;
+        }
+
+        /* Animations */
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-30px);
+            }
+            60% {
+                transform: translateY(-15px);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(211, 47, 47, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(211, 47, 47, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(211, 47, 47, 0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Thank You!</h1>
+    </header>
+
+    <div class="content">
+        <h2>We Appreciate Your Message</h2>
+        <p>Thank you for contacting CARSO. We have received your message and will get back to you shortly.</p>
+        <div class="smiley">😊</div>
+        <a href="/" class="back-button">Go Back to Home</a>
+    </div>
+
+    <footer>
+        <p>© 2024 CARSO. All rights reserved.</p>
+    </footer>
+</body>
+</html>
