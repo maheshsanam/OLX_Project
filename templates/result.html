@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Price Result - CARSO</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            color: #333;
+        }
+
+        header {
+            background-color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        header h1 {
+            color: #d32f2f;
+            font-size: 2.5em;
+            margin: 0;
+            font-weight: bold;
+        }
+
+        .content {
+            padding: 40px;
+            text-align: center;
+        }
+
+        .content h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #d32f2f;
+        }
+
+        .content p {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .price-display {
+            font-size: 2.5em;
+            color: #d32f2f;
+            font-weight: bold;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* Car animation styles */
+        .car-animation {
+            position: relative;
+            width: 200px;
+            height: 100px;
+            margin: 40px auto;
+            animation: driveIn 3s ease-in-out forwards;
+        }
+
+        .car-body {
+            width: 100%;
+            height: 50px;
+            background-color: #d32f2f;
+            position: absolute;
+            bottom: 10px;
+            border-radius: 20px 20px 0 0;
+        }
+
+        .car-top {
+            width: 120px;
+            height: 40px;
+            background-color: #d32f2f;
+            position: absolute;
+            top: -40px;
+            left: 40px;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .wheel {
+            width: 30px;
+            height: 30px;
+            background-color: #333;
+            position: absolute;
+            bottom: 0;
+            border-radius: 50%;
+            animation: rotateWheel 1s infinite linear;
+        }
+
+        .wheel.left {
+            left: 30px;
+        }
+
+        .wheel.right {
+            right: 30px;
+        }
+
+        @keyframes rotateWheel {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes driveIn {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        .back-button {
+            background-color: #d32f2f;
+            color: #fff;
+            padding: 15px 25px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+            margin-top: 20px;
+            display: inline-block;
+        }
+
+        .back-button:hover {
+            background-color: #b71c1c;
+        }
+
+        footer {
+            background-color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-top: 2px solid #e0e0e0;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1em;
+            color: #777;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Car Price Result</h1>
+    </header>
+
+    <div class="content">
+        <h2>Your Estimated Car Price</h2>
+        <div class="car-animation">
+            <div class="car-body"></div>
+            <div class="car-top"></div>
+            <div class="wheel left"></div>
+            <div class="wheel right"></div>
+        </div>
+        <p class="price-display"><span id="car-price">{{ car_price }}</span></p> <!-- Replace with backend value -->
+        <a href="/" class="back-button">Back to Home</a>
+    </div>
+
+    <footer>
+        <p>© 2024 CARSO. All rights reserved.</p>
+    </footer>
+</body>
+</html>
